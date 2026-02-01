@@ -17,7 +17,7 @@
      <button type="button" onclick="lowercase()">convert to LOWER Case</button>
      <button type="button" onclick="wordcount()">Total Word Count</button><br><br>
      <button type="button" onclick="exacttext()">Exact text</button>
-      <button type="button" onclick="CapitalizeEachWordFirstletter()">Capitalize First letter</button>
+      <button type="button" onclick="CapitalizeEachWordFirstletter()">Capitalize Each Word First letter</button>
       <button type="button" onclick="RemoveSpace()">Remove Space</button>
     <div id="ff">
     <p id="res1"></p>
@@ -50,11 +50,11 @@
                 totalccount=totalccount+d
             }
         }
-        document.getElementById("res1").innerHTML=" vowel count="+count
-        document.getElementById("res2").innerHTML="all vowel="+totalcount
-        document.getElementById("res3").innerHTML=" consonant count="+ccount
-        document.getElementById("res4").innerHTML="all consonent="+totalccount
-         document.getElementById("res5").innerHTML="all word="+(count+ccount)
+        document.getElementById("res1").innerHTML=" vowel count= "+count
+        document.getElementById("res2").innerHTML="all vowel= "+totalcount
+        document.getElementById("res3").innerHTML=" consonant count= "+ccount
+        document.getElementById("res4").innerHTML="all consonent= "+totalccount
+         document.getElementById("res5").innerHTML="all word= "+(count+ccount)
 
 
 
@@ -62,11 +62,11 @@
     function upercase(){
         let msg=document.getElementById("d1").value.toUpperCase()
 
-        document.getElementById("res1").innerHTML="UpperCase="+msg
+        document.getElementById("res1").innerHTML="UpperCase= "+msg
     }
     function lowercase(){
         let msg=document.getElementById("d1").value.toLowerCase()
-        document.getElementById("res1").innerHTML="LowerCase="+msg
+        document.getElementById("res1").innerHTML="LowerCase= "+msg
     }
     function wordcount(){
         let msg=document.getElementById("d1").value.trim()
@@ -83,19 +83,19 @@
         }
            
         
-    document.getElementById("res1").innerHTML="Total word="+count
+    document.getElementById("res1").innerHTML="Total word= "+count
 
     }
     function exacttext(){
         let msg=document.getElementById("d1").value
-        document.getElementById("res1").innerHTML="Exact Text="+msg
+        document.getElementById("res1").innerHTML="Exact Text= "+msg
     }
     function CapitalizeEachWordFirstletter(){
         let msg=document.getElementById("d1").value.toLowerCase()
         let result=msg.replace(/\b\w/g,function (char){
             return char.toUpperCase()}
     )
-    document.getElementById("res1").innerHTML="Capitalize Text="+result
+    document.getElementById("res1").innerHTML="Capitalize Text= "+result
         
     }
     function RemoveSpace(){
@@ -109,10 +109,11 @@
                 hh=hh+ch
             }
         }
-    document.getElementById("res1").innerHTML="Space Removed Text="+hh
+    document.getElementById("res1").innerHTML="Space Removed Text= "+hh
 
     }
 </script>
 
 </body>
+
 </html>
